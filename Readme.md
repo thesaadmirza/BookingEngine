@@ -5,8 +5,11 @@ The test project won't be used in any real environment.
 ## Summary:
 
 Create DJANGO Project with DJANGO REST framework for:
+- the main listing object could be a single unit (Apartment) or a multi-unit (Hotel)
+    - single unit have booking information (price) directly connected to it.
+    - multi units have booking information (price) connected to each of the children.
 - filtering through Hotels/Apartments that returns JSON response with available units based on search criteria.
-- the solution should be able to handle large dataset of units
+- the solution should be able to handle large dataset of units.
 
 1. There is pre-build structure for Hotels/Apartments (could be changed/extended). With prefilled database.
     - superuser
@@ -21,8 +24,8 @@ Create DJANGO Project with DJANGO REST framework for:
 		- Apartment should not have any blocked day inside the range and should have price lower than max_price.
 		- Hotel should have at least 1 Hotel Room without any blocked days in the range with price lower than max_price.
 
-	- Returned objects should be SORTED from lowest to highest price
-		- for hotels we should use the lowest AVAILABLE room_type price
+	- Returned objects should be SORTED from lowest to highest price.
+		- for hotels we should use the lowest AVAILABLE room_type price.
 
 
 ## Test Case example:
