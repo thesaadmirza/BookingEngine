@@ -16,16 +16,23 @@ Create DJANGO Project with DJANGO REST framework for:
         - username: **admin**
         - password: **admin**
 
-2. We should be able to block days (already booked days) for each Apartment/Hotel.
-    - New Model for BlockedDays is needed
+2. We should be able to block days (already booked days) for each Apartment or HotelRoomType.
+    - new Model for BlockedDays is needed
 
 3. We need endpoint where we will get available Apartments and Hotels based on:
 	- date range ( from 2021-12-09 to 2021-12-12) and max_price (100):
 		- Apartment should not have any blocked day inside the range and should have price lower than max_price.
 		- Hotel should have at least 1 Hotel Room without any blocked days in the range with price lower than max_price.
 
-	- Returned objects should be SORTED from lowest to highest price.
+	- returned objects should be SORTED from lowest to highest price.
 		- for hotels we should use the lowest AVAILABLE room_type price.
+
+
+## Initial Project setup
+    git clone https://bitbucket.org/staykeepersdev/bookingengine.git
+    python -m venv venv
+    pip install -r requirements.txt
+    python manage.py runserver
 
 
 ## Test Case example:
