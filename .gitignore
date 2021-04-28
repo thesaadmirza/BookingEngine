@@ -58,8 +58,6 @@ coverage.xml
 /static/
 /media/
 *.log
-local_settings.py
-db.sqlite3
 
 
 # IPython
