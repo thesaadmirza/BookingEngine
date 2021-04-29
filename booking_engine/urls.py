@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from listings.views import ListApiView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/v1/units/', ListApiView.as_view(),
+         name='booking-list')
 ]
